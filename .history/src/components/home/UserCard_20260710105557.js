@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 export default function UserCard({ curso }) {
 
     const precoFormatado = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(curso.preco);

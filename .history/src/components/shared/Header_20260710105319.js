@@ -20,6 +20,8 @@ export default function Header() {
     let cursosButtonClassName;
     let aboutButtonClassName;
 
+    console.log(buttonState)
+
     if (buttonState === buttonNavStates.COURSES) {
         cursosButtonClassName = buttonColors.blue
         aboutButtonClassName = buttonColors.default
@@ -42,7 +44,7 @@ export default function Header() {
 
                 <nav className="flex items-center gap-2 text-sm font-semibold text-slate-600" aria-label="Navegação principal">
                     <Link href="/" onClick={() => { setButtonState(buttonNavStates.COURSES) }} className={"rounded-full px-3 py-2 " + cursosButtonClassName}>Cursos</Link>
-                    <Link href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</Link>
+                    <Link href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</a>
                 </nav>
             </div>
         </header>

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 const buttonNavStates = Object.freeze({
@@ -15,7 +14,9 @@ const buttonColors = Object.freeze({
 });
 
 export default function Header() {
-    const [buttonState, setButtonState] = useState(buttonNavStates.COURSES);
+    const [buttonState, setButtonState] = useState(but);
+
+    console.log(buttonState);
 
     let cursosButtonClassName;
     let aboutButtonClassName;
@@ -41,8 +42,8 @@ export default function Header() {
                 </a>
 
                 <nav className="flex items-center gap-2 text-sm font-semibold text-slate-600" aria-label="Navegação principal">
-                    <Link href="/" onClick={() => { setButtonState(buttonNavStates.COURSES) }} className={"rounded-full px-3 py-2 " + cursosButtonClassName}>Cursos</Link>
-                    <Link href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</Link>
+                    <a href="/" onClick={() => { setButtonState(buttonNavStates.COURSES) }} className={"rounded-full px-3 py-2 " + cursosButtonClassName}>Cursos</a>
+                    <a href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</a>
                 </nav>
             </div>
         </header>

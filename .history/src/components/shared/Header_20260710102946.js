@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 const buttonNavStates = Object.freeze({
@@ -15,20 +14,22 @@ const buttonColors = Object.freeze({
 });
 
 export default function Header() {
-    const [buttonState, setButtonState] = useState(buttonNavStates.COURSES);
+    const [buttonState, setButtonState] = useState("COURSES");
+
+    console.log(buttonState);
 
     let cursosButtonClassName;
     let aboutButtonClassName;
 
     if (buttonState === buttonNavStates.COURSES) {
-        cursosButtonClassName = buttonColors.blue
-        aboutButtonClassName = buttonColors.default
+        cursosButtonClassName = b
+        aboutButtonClassName = "hover:bg-slate-100"
     } else if (buttonState === buttonNavStates.ABOUT) {
-        cursosButtonClassName = buttonColors.default
-        aboutButtonClassName = buttonColors.blue
+        cursosButtonClassName = "hover:bg-slate-100"
+        aboutButtonClassName = "bg-weg-light text-weg-dark"
     } else {
-        cursosButtonClassName = buttonColors.default
-        aboutButtonClassName = buttonColors.default
+        cursosButtonClassName = "hover:bg-slate-100"
+        aboutButtonClassName = "hover:bg-slate-100"
     }
 
 
@@ -41,8 +42,8 @@ export default function Header() {
                 </a>
 
                 <nav className="flex items-center gap-2 text-sm font-semibold text-slate-600" aria-label="Navegação principal">
-                    <Link href="/" onClick={() => { setButtonState(buttonNavStates.COURSES) }} className={"rounded-full px-3 py-2 " + cursosButtonClassName}>Cursos</Link>
-                    <Link href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</Link>
+                    <a href="/" onClick={() => { setButtonState(buttonNavStates.COURSES) }} className={"rounded-full px-3 py-2 " + cursosButtonClassName}>Cursos</a>
+                    <a href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</a>
                 </nav>
             </div>
         </header>

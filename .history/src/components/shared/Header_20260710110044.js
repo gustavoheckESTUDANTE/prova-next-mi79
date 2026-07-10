@@ -15,7 +15,7 @@ const buttonColors = Object.freeze({
 });
 
 export default function Header() {
-    const [buttonState, setButtonState] = useState(buttonNavStates.COURSES);
+    const [buttonState, setButtonState] = useState(buttonNavStates.);
 
     let cursosButtonClassName;
     let aboutButtonClassName;

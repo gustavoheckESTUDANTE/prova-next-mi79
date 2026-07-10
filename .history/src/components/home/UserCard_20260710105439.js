@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function UserCard({ curso }) {
 
@@ -23,7 +22,7 @@ export default function UserCard({ curso }) {
                     </div>
 
                     <p className="mt-4 text-sm text-slate-500">{curso.local}</p>
-                    <Link href={`/${curso.id}`} className="mt-5 inline-flex text-sm font-extrabold text-weg-blue hover:text-weg-dark">Ver detalhes</Link>
+                    <Link href={`/${curso.id}`} className="mt-5 inline-flex text-sm font-extrabold text-weg-blue hover:text-weg-dark">Ver detalhes</a>
                 </div>
             </article>
     </>

@@ -20,6 +20,8 @@ export default function Header() {
     let cursosButtonClassName;
     let aboutButtonClassName;
 
+    console.log(buttonState)
+
     if (buttonState === buttonNavStates.COURSES) {
         cursosButtonClassName = buttonColors.blue
         aboutButtonClassName = buttonColors.default

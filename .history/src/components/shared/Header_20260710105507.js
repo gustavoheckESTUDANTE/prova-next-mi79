@@ -42,7 +42,7 @@ export default function Header() {
 
                 <nav className="flex items-center gap-2 text-sm font-semibold text-slate-600" aria-label="Navegação principal">
                     <Link href="/" onClick={() => { setButtonState(buttonNavStates.COURSES) }} className={"rounded-full px-3 py-2 " + cursosButtonClassName}>Cursos</Link>
-                    <Link href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</Link>
+                    <Lin href="sobre" onClick={() => { setButtonState(buttonNavStates.ABOUT) }} className={"rounded-full px-3 py-2 " + aboutButtonClassName}>Sobre a WEG</Link>
                 </nav>
             </div>
         </header>
