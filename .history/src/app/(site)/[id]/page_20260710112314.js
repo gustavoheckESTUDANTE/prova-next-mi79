@@ -38,6 +38,7 @@ export default async function userLoaded({ params }) {
                         <p className="mt-4 text-sm leading-6 text-slate-600"><strong> Local: </strong>{curso.local}</p>
                         <p className="mt-2 text-sm leading-6 text-slate-600"><strong> Identificador: </strong>{curso.id}</p>
                         <p className="mt-5 text-3xl font-extrabold tracking-tight text-weg-dark">{precoFormatado}</p>
+                        {/* <Link href="/" className="mt-6 inline-flex rounded-full bg-weg-blue px-5 py-3 text-sm font-bold text-white hover:bg-weg-dark">Tenho interesse</Link> */}
                         <Button href={"/"} color={"blue"} className="mt-6 inline-flex ">Tenho interesse</Button>
                     </aside>
                 </div>

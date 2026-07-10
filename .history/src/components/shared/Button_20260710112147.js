@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Button({children, href, color, className}) {
+export default function Button({children, href, color, ...props}) {
 
     let buttonClassName;
 
@@ -11,6 +11,6 @@ export default function Button({children, href, color, className}) {
     }
 
     return <>
-        <Link href={href} className={"rounded-full px-5 py-3 text-sm font-bold " + buttonClassName + " " + className}>{children}</Link>
+        <Link href={href} className={"rounded-full px-5 py-3 text-sm font-bold " + buttonClassName}>{children}</Link>
     </>
 }
