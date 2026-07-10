@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --weg-blue: '#00579D';
+  --weg-dark: '#003F7D';
+  --weg-light: '#EAF4FF';
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --weg-blue: var(--background);
+  --weg-foreground: var(--foreground);
+  --weg-foreground: var(--foreground);
+}
+
+body {
+  font-family: Inter, Arial, sans-serif
+}

@@ -1,0 +1,49 @@
+import UserCard from "@/components/home/UserCard";
+import GetCards from "@/services/GetCards"
+
+export default async function HomePage() {
+
+    const cards = await GetCards();
+
+    const cardsSemDestaque = cards.filter((card) => card.destaque == true);
+
+    const cardsComDestaque = cards.filter((card) => card.destaque == false);
+
+    return <>
+        <section className="border-b border-slate-200 bg-slate-50">
+            <div className="mx-auto max-w-6xl px-4 py-16">
+                <div className="max-w-3xl">
+                    <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-weg-blue">Plataforma de cursos técnicos</p>
+                    <h1 className="text-4xl font-extrabold tracking-tight text-weg-dark md:text-6xl">
+                        Aprendizagem para quem transforma tecnologia em indústria
+                    </h1>
+                    <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600">
+                        A WEG Academy reúne cursos e formações voltados para automação, acionamentos,
+                        eficiência energética, eletricidade industrial e soluções aplicadas ao mundo do trabalho.
+                    </p>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                        <a href="#cursos" className="rounded-full bg-weg-blue px-5 py-3 text-sm font-bold text-white hover:bg-weg-dark">Explorar cursos</a>
+                        <a href="./sobre.html" className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-weg-dark hover:bg-slate-50">Conhecer a WEG</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 py-14" id="cursos">
+            <div className="mb-8 max-w-2xl">
+                <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-weg-blue">Catálogo</p>
+                <h2 className="text-3xl font-extrabold tracking-tight text-weg-dark">Cursos disponíveis</h2>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                    Os cards abaixo estão estáticos e mockados na base HTML. Na versão em Next.js,
+                    eles deverão ser renderizados a partir da API/JSON, exibindo apenas a categoria <strong>Cursos</strong>.
+                </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+                {
+                    cards.map(card => <UserCard curso={card} key={card.id}></UserCard>)
+                }
+            </div>
+        </section>
+    </>
+}
